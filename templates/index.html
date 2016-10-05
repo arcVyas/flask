@@ -6,8 +6,13 @@
       
       <div class="section-content">
         <h2>Discover places near you.</h2>
+        <div>
+        <a href="{{ url_for('login') }}" class="btn-primary">Login</a>
         <a href="{{ url_for('signup') }}" class="btn-primary">Sign up</a>
-        <a href="{{ url_for('about') }}" class="btn-secondary">Learn more</a> 
+        </div>
+        <div style="margin-top: 10px;">
+        <a href="{{ url_for('about') }}" class="btn-secondary">Learn more</a>
+        </div> 
       </div>
 
       <div class="section-device">
