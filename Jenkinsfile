@@ -32,7 +32,7 @@ pipeline {
             
           },
           "Static Analysis": {
-            tool(name: 'SonarQube', type: 'SonarQube Scanner')
+            tool(name: 'sonar-scanner', type: 'SonarQube Scanner')
             sh './gradlew --info sonarqube'
             
           }
