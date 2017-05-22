@@ -30,6 +30,11 @@ pipeline {
           "Test 2": {
             echo 'Test2'
             
+          },
+          "Static Analysis": {
+            tool(name: 'scannerHome', type: 'SonarQube')
+            sh 'sh "${scannerHome}/bin/sonar-scanner"'
+            
           }
         )
       }
