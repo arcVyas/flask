@@ -31,9 +31,8 @@ pipeline {
             echo 'Test2'
             
           },
-          "Static Analysis": {
-            tool 'sonar-scanner'
-            sh './gradlew --info sonarqube'
+          "Static Code Analysis": {
+            echo 'Code Analyzed'
             
           }
         )
