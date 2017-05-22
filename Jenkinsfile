@@ -32,12 +32,8 @@ pipeline {
             
           },
           "Static Analysis": {
-            tool(name: 'sonar-scanner', type: 'sonar-scanner')
+            tool 'sonar-scanner'
             sh './gradlew --info sonarqube'
-            
-          },
-          "X": {
-            waitForQualityGate()
             
           }
         )
