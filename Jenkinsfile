@@ -32,8 +32,8 @@ pipeline {
             
           },
           "Static Analysis": {
-            tool(name: 'scannerHome', type: 'SonarQube')
-            sh 'sh "${scannerHome}/bin/sonar-scanner"'
+            tool(name: 'sonar-scanner', type: 'SonarQube')
+            sh 'sh "${sonar-scanner}/bin/sonar-scanner"'
             
           }
         )
