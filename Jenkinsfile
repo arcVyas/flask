@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'Development'
+    }
+    
+  }
   stages {
     stage('Initialize') {
       steps {
@@ -49,5 +54,8 @@ pipeline {
         echo 'Deployed'
       }
     }
+  }
+  environment {
+    Dev = '123'
   }
 }
