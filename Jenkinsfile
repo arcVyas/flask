@@ -41,6 +41,7 @@ pipeline {
     stage('Ready to Deploy') {
       steps {
         input(message: 'Should I deploy?', id: '_ready', ok: 'Go Ahead')
+        slackSend 'Ready to deploy ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>'
       }
     }
     stage('Deploy') {
